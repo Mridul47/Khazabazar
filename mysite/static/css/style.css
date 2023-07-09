@@ -62,7 +62,7 @@ a:focus {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #E26F6F;
+  background: #e26f6f;
   width: 44px;
   height: 44px;
   text-align: center;
@@ -81,7 +81,7 @@ a:focus {
 }
 
 .back-to-top:hover {
-  background: #719a0a;
+  background: #0C2ACA;
 }
 
 [class^="flaticon-"]:before,
@@ -175,7 +175,7 @@ a:focus {
 
   .navbar-light.nav-sticky .navbar-nav .nav-link,
   .navbar-light.nav-sticky .navbar-nav .nav-link:focus {
-    color: #666666;
+    color: #e26f6f;
   }
 
   .navbar-light .navbar-nav .nav-link:hover,
@@ -185,7 +185,7 @@ a:focus {
 
   .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
   .navbar-light.nav-sticky .navbar-nav .nav-link.active {
-    color: #fbaf32;
+    color: #0C2ACA;
   }
 }
 
@@ -282,7 +282,7 @@ a:focus {
 }
 
 .carousel .carousel-text h1 span {
-  color: #E26F6F;
+  color: #e26f6f;
 }
 
 .carousel .carousel-text p {
@@ -294,8 +294,8 @@ a:focus {
 
 .carousel .carousel-btn .btn:last-child {
   margin-left: 10px;
-  background: #0C2ACA;
-  border-color: #0C2ACA;
+  background: #0c2aca;
+  border-color: #0c2aca;
 }
 
 .carousel .carousel-btn .btn:last-child:hover {
@@ -377,7 +377,7 @@ a:focus {
 
 .page-header h2 {
   position: relative;
-  color: #fbaf32;
+  color: #E26F6F;
   font-size: 60px;
   font-weight: 700;
 }
@@ -402,7 +402,7 @@ a:focus {
   top: -1px;
   right: -7px;
   text-align: center;
-  color: #fbaf32;
+  color: #E26F6F;
 }
 
 .page-header a:last-child::after {
@@ -428,7 +428,7 @@ a:focus {
 }
 
 .section-header p {
-  color: #E26F6F;
+  color: #e26f6f;
   margin-bottom: 5px;
   position: relative;
   font-size: 20px;
@@ -482,7 +482,7 @@ a:focus {
 
 .booking .booking-form {
   padding: 60px 30px;
-  background: #E26F6F;
+  background: #e26f6f;
 }
 
 .booking .booking-form .control-group {
@@ -570,7 +570,7 @@ a:focus {
 .food .food-item i {
   position: relative;
   display: inline-block;
-  color: #E26F6F;
+  color: #e26f6f;
   font-size: 60px;
   line-height: 60px;
   margin-bottom: 20px;
@@ -678,7 +678,7 @@ a:focus {
   display: block;
   width: 100px;
   height: 100px;
-  background: #E26F6F;
+  background: #e26f6f;
   border-radius: 50%;
   animation: pulse-border 1500ms ease-out infinite;
 }
@@ -693,7 +693,7 @@ a:focus {
   display: block;
   width: 100px;
   height: 100px;
-  background: #E26F6F;
+  background: #e26f6f;
   border-radius: 50%;
   transition: all 200ms;
 }
@@ -944,7 +944,7 @@ a:focus {
   display: inline-block;
   float: right;
   padding-left: 5px;
-  color: #E26F6F;
+  color: #e26f6f;
   background: #ffffff;
 }
 
@@ -1942,7 +1942,7 @@ a:focus {
 }
 
 .footer .copyright p a {
-  color: #E26F6F;
+  color: #e26f6f;
 }
 
 .footer .copyright p a:hover {

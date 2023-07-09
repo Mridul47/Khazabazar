@@ -1,3 +1,7 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}About{% endblock title %}
+{% block content %}
 <div>
      <!-- Page Header Start -->
      <div class="page-header mb-0">
@@ -60,7 +64,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about-img">
-                        <img src="img/about.jpg" alt="Image">
+                        <img src="/static/img/about.jpg" alt="Image">
                         <button type="button" class="btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
                             <span></span>
                         </button>
@@ -105,7 +109,8 @@
         </div>
     </div> 
     <!-- Video Modal End -->
-</div>   
+</div> 
+{% endblock %}  
         
        
         
