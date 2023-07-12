@@ -24,6 +24,7 @@ urlpatterns = [
     path('contact/', homeViews.contact_us, name='contact'),
     path('about/', homeViews.about, name='about'),
     path('register/', homeViews.register, name='register'),
+    path('check_user_exists/',homeViews.check_user_exists,name="check_user_exist"),
     path('login/', homeViews.login, name='login'),
     path('all_dishes/', homeViews.all_dishes, name='all_dishes'),
     # path('dish/<int:id>/', homeViews.single_dish, name='dish'),

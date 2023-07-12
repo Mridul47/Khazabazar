@@ -60,6 +60,15 @@ def register(request):
 
     return render(request,'register.html', context)
 
+def check_user_exists(request):
+    email = request.GET.get('usern')
+    check = User.objects.filter(username=email)
+    if len(check)==0:
+        return JsonResponse({'status':0,'message':'Not Exist'})
+    else:
+        return JsonResponse({'status':1,'message':'A user with this email already exists!'})
+    
+
 def login(request):
     return render(request, 'login.html')
 
