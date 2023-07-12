@@ -24,6 +24,7 @@ urlpatterns = [
     path('contact/', homeViews.contact_us, name='contact'),
     path('about/', homeViews.about, name='about'),
     path('register/', homeViews.register, name='register'),
+    path('login/', homeViews.login, name='login'),
     
 ]
 
