@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # contact us ko form models.py ma banako kura eta import garya
-from home.models import Contact, Profile, Dish
+from home.models import Contact, Profile, Dish, Order
 
 # Register your models here.
 admin.site.site_header="khazabazar | Admin"
@@ -15,3 +15,4 @@ class DishAdmin(admin.ModelAdmin):
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(Dish, DishAdmin )
 admin.site.register(Profile)
+admin.site.register(Order)
