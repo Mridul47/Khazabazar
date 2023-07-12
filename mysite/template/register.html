@@ -88,37 +88,37 @@
 {% block script %}
 <script>
     console.log('script here!!!!');
-    // function checkPass(){
-    //     var p = $('#pass').val();
-    //     var cp = $('#re_pass').val();
-    //     if(p==cp){
-    //         $("#signup").attr('disabled',false).css({'background':'#6dabe4'});
-    //         $('#msz').html('');
-    //     }else{
+    function checkPass(){
+        var p = $('#pass').val();
+        var cp = $('#re_pass').val();
+        if(p==cp){
+            $("#signup").attr('disabled',false).css({'background':'#6dabe4'});
+            $('#msz').html('');
+        }else{
 
-    //         $("#signup").attr('disabled',true).css({'background':'red'});
-    //         $('#msz').html("<small>Password didn't matched!</small>");
+            $("#signup").attr('disabled',true).css({'background':'red'});
+            $('#msz').html("<small>Password didn't matched!</small>");
 
-    //     }
-    // }
+        }
+    }
 
-    // function check_email(){
-    //     var email = document.getElementById('email').value;
-    //     $.ajax({
-    //         url:'{% url "check_user_exist" %}',
-    //         type:'get',
-    //         data:{usern:email},
-    //         success:function(data){
-    //             if(data.status==0){
-    //                 $("#signup").attr('disabled',false).css({'background':'#719a0a'});
-    //                 $('#msz').html('');
-    //             }else{
-    //                 $("#signup").attr('disabled',true).css({'background':'red'});
-    //                 $('#msz').html("<small>"+data.message+"</small>");
+    function check_email(){
+        var email = document.getElementById('email').value;
+        $.ajax({
+            url:'{% url "check_user_exist" %}',
+            type:'get',
+            data:{usern:email},
+            success:function(data){
+                if(data.status==0){
+                    $("#signup").attr('disabled',false).css({'background':'#719a0a'});
+                    $('#msz').html('');
+                }else{
+                    $("#signup").attr('disabled',true).css({'background':'red'});
+                    $('#msz').html("<small>"+data.message+"</small>");
 
-    //             }
-    //         }
-    //     })
-    // }
+                }
+            }
+        })
+    }
 </script>
 {% endblock%}
