@@ -17,6 +17,8 @@ Including another URLconf
 from home import views as homeViews
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings 
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,8 +29,8 @@ urlpatterns = [
     path('check_user_exists/',homeViews.check_user_exists,name="check_user_exist"),
     path('login/', homeViews.login, name='login'),
     path('all_dishes/', homeViews.all_dishes, name='all_dishes'),
-    # path('dish/<int:id>/', homeViews.single_dish, name='dish'),
+    path('dish/<int:id>/', homeViews.single_dish, name='dish'),
     
-]
+]+static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
 

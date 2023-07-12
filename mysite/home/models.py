@@ -32,7 +32,7 @@ class Dish(models.Model):
     image = models.ImageField(upload_to='dishes/%Y/%m/%d')
     ingredients = models.TextField()
     details = models.TextField(blank=True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    # category = models.ForeignKey(Category, on_delete=models.CASCADE)
     price = models.FloatField()
     discounted_price = models.FloatField(blank=True)
     is_available = models.BooleanField(default=True)
