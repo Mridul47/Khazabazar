@@ -139,9 +139,9 @@ def dashboard(request):
         else:
             context['status'] = 'Current Password Incorrect!'
 
-    # #My Orders 
-    # orders = Order.objects.filter(customer__user__id=request.user.id).order_by('-id')
-    # context['orders']=orders
+    #My Orders 
+    orders = Order.objects.filter(customer__user__id=request.user.id).order_by('-id')
+    context['orders']=orders
     return render(request, 'dashboard.html', context)
 
 def user_logout(request):
