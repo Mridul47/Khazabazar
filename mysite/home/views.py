@@ -106,38 +106,38 @@ def dashboard(request):
     profile = Profile.objects.get(user__id=request.user.id)
     context['profile'] = profile
 
-    # #update profile
-    # if "update_profile" in request.POST:
-    #     print("file=",request.FILES)
-    #     name = request.POST.get('name')
-    #     contact = request.POST.get('contact_number')
-    #     add = request.POST.get('address')
+    #update profile
+    if "update_profile" in request.POST:
+        print("file=",request.FILES)
+        name = request.POST.get('name')
+        contact = request.POST.get('contact_number')
+        add = request.POST.get('address')
        
 
-    #     profile.user.first_name = name 
-    #     profile.user.save()
-    #     profile.contact_number = contact 
-    #     profile.address = add 
+        profile.user.first_name = name 
+        profile.user.save()
+        profile.contact_number = contact 
+        profile.address = add 
 
-    #     if "profile_pic" in request.FILES:
-    #         pic = request.FILES['profile_pic']
-    #         profile.profile_pic = pic
-    #     profile.save()
-    #     context['status'] = 'Profile updated successfully!'
+        if "profile_pic" in request.FILES:
+            pic = request.FILES['profile_pic']
+            profile.profile_pic = pic
+        profile.save()
+        context['status'] = 'Profile updated successfully!'
     
-    # #Change Password 
-    # if "change_pass" in request.POST:
-    #     c_password = request.POST.get('current_password')
-    #     n_password = request.POST.get('new_password')
+    #Change Password 
+    if "change_pass" in request.POST:
+        c_password = request.POST.get('current_password')
+        n_password = request.POST.get('new_password')
 
-    #     check = login_user.check_password(c_password)
-    #     if check==True:
-    #         login_user.set_password(n_password)
-    #         login_user.save()
-    #         login(request, login_user)
-    #         context['status'] = 'Password Updated Successfully!' 
-    #     else:
-    #         context['status'] = 'Current Password Incorrect!'
+        check = login_user.check_password(c_password)
+        if check==True:
+            login_user.set_password(n_password)
+            login_user.save()
+            login(request, login_user)
+            context['status'] = 'Password Updated Successfully!' 
+        else:
+            context['status'] = 'Current Password Incorrect!'
 
     # #My Orders 
     # orders = Order.objects.filter(customer__user__id=request.user.id).order_by('-id')
