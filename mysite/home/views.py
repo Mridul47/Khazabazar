@@ -71,7 +71,7 @@ def check_user_exists(request):
         return JsonResponse({'status':1,'message':'A user with this email already exists!'})
     
 
-def login(request):
+def signin(request):
     return render(request, 'login.html')
 
 def all_dishes(request):
