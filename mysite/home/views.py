@@ -40,6 +40,9 @@ def contact_us(request):
 def about(request):
     return render(request, 'about.html')
 
+def team_members(request):
+    return render(request, 'team.html')
+
 def register(request):
     context={}
     if request.method=="POST":

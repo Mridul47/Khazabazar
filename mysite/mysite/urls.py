@@ -25,6 +25,7 @@ urlpatterns = [
     path('', homeViews.index, name='index'),
     path('contact/', homeViews.contact_us, name='contact'),
     path('about/', homeViews.about, name='about'),
+    path('team/',homeViews.team_members,name="team"),
     path('register/', homeViews.register, name='register'),
     path('check_user_exists/',homeViews.check_user_exists,name="check_user_exist"),
     path('login/', homeViews.signin, name='login'),
