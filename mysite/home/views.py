@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
 from home.models import Contact, Dish, Category, Profile, Order
+from django.contrib.auth import login, authenticate, logout
 from paypal.standard.forms import PayPalPaymentsForm
 from django.conf import settings
 
@@ -72,7 +73,21 @@ def check_user_exists(request):
     
 
 def signin(request):
-    return render(request, 'login.html')
+    context={}
+    if request.method=="POST":
+        email = request.POST.get('email')
+        passw = request.POST.get('password')
+
+        check_user = authenticate(username=email, password=passw)
+        if check_user:
+            login(request, check_user)
+            context.update({'message':'Login Success','class':'alert-success'})
+            # if check_user.is_superuser or check_user.is_staff:
+            #     return HttpResponseRedirect('/admin')
+            # return HttpResponseRedirect('/dashboard')
+        else:
+            context.update({'message':'Invalid Login Details!','class':'alert-danger'})
+    return render(request, 'login.html', context)
 
 def all_dishes(request):
     context={}
