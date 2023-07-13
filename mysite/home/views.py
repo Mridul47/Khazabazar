@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
-from home.models import Contact, Dish, Category, Profile, Order
+from home.models import Contact, Dish, Category, Profile, Order, Team
 from django.contrib.auth import login, authenticate, logout
 from paypal.standard.forms import PayPalPaymentsForm
 from django.conf import settings
@@ -41,7 +41,10 @@ def about(request):
     return render(request, 'about.html')
 
 def team_members(request):
-    return render(request, 'team.html')
+    context={}
+    members = Team.objects.all().order_by('name')
+    context['team_members'] = members
+    return render(request, 'team.html', context)
 
 def register(request):
     context={}
