@@ -81,7 +81,7 @@ def signin(request):
         check_user = authenticate(username=email, password=passw)
         if check_user:
             login(request, check_user)
-            context.update({'message':'Login Success','class':'alert-success'})
+            return HttpResponseRedirect('/dashboard/')
             # if check_user.is_superuser or check_user.is_staff:
             #     return HttpResponseRedirect('/admin')
             # return HttpResponseRedirect('/dashboard')
@@ -99,6 +99,13 @@ def all_dishes(request):
 
     context['dishes'] = dishes
     return render(request,'all_dishes.html', context)
+
+def dashboard(request):
+    return render(request, 'dashboard.html')
+
+def user_logout(request):
+    logout(request)
+    return HttpResponseRedirect('/')
 
 
 def single_dish(request, id):

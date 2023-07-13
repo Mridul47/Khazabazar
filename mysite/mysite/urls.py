@@ -28,6 +28,8 @@ urlpatterns = [
     path('register/', homeViews.register, name='register'),
     path('check_user_exists/',homeViews.check_user_exists,name="check_user_exist"),
     path('login/', homeViews.signin, name='login'),
+    path('dashboard/', homeViews.dashboard, name='dashboard'),
+    path('logout/', homeViews.user_logout, name='logout'),
     path('all_dishes/', homeViews.all_dishes, name='all_dishes'),
     path('dish/<int:id>/', homeViews.single_dish, name='dish'),
 
