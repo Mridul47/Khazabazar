@@ -35,6 +35,8 @@ urlpatterns = [
     path('dish/<int:id>/', homeViews.single_dish, name='dish'),
 
     path('paypal/',include('paypal.standard.ipn.urls')),
+    path('payment_done/', homeViews.payment_done, name='payment_done'),
+    path('payment_cancel/', homeViews.payment_cancel, name='payment_cancel'),
     
 ]+static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 

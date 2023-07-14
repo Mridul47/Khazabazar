@@ -132,4 +132,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 
-# HOST = '127.0.0.1:8000'
+PAYPAL_RECEIVER_EMAIL = 'sts.amandeepkaur@gmail.com'
+PAYPAL_TEST = True
+
+HOST = '127.0.0.1:8000'
